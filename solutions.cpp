@@ -1,7 +1,134 @@
-
+#include <iostream>
+#include <iomanip>
+#include <vector>
+#include <algorithm>
 
 int main()
 {
+  double a[] = {4.00, 4.50, 5.00, 2.00, 1.50};
+  int b, c;
+  std::cin >> b >> c;
+
+  double resp = a[b - 1] * c;
+
+  std::cout.precision(2);
+  std::cout << "Total: R$ " << std::fixed << resp << std::endl;
+
+  return 0;
+}
+
+/*int main()
+{
+  while (true)
+  {
+    int n;
+    std::cin >> n;
+
+    if (n == 0)
+      break;
+
+    std::vector<int> gifts(2 * n);
+
+    for (int i = 0; i < 2 * n; ++i)
+    {
+      std::cin >> gifts[i];
+    }
+
+    std::sort(gifts.begin(), gifts.end());
+
+    int most_expensive = 0, cheapest = 2e9;
+    for (int i = 0; i < n; ++i)
+    {
+      int total_price = gifts[i] + gifts[2 * n - i - 1];
+      most_expensive = std::max(most_expensive, total_price);
+      cheapest = std::min(cheapest, total_price);
+    }
+
+    std::cout << most_expensive << " " << cheapest << std::endl;
+  }
+
+  return 0;
+}
+
+/*#include <iostream>
+
+int main()
+{
+  double number;
+
+  std::cin >> number;
+
+  if (number >= 0 && number <= 25)
+  {
+    std::cout << "Intervalo [0,25]" << std::endl;
+  }
+  else if (number > 25 && number <= 50)
+  {
+    std::cout << "Intervalo (25,50]" << std::endl;
+  }
+  else if (number > 50 && number <= 75)
+  {
+    std::cout << "Intervalo (50,75]" << std::endl;
+  }
+  else if (number > 75 && number <= 100)
+  {
+    std::cout << "Intervalo (75,100]" << std::endl;
+  }
+  else
+  {
+    std::cout << "Fora de intervalo" << std::endl;
+  }
+
+  return 0;
+}
+
+/*#include <iostream>
+#include <cmath>
+
+int main()
+{
+  double A, B, C;
+  double delta, R1, R2;
+
+  std::cin >> A >> B >> C;
+
+  delta = B * B - 4 * A * C;
+
+  if (A == 0 || delta < 0)
+  {
+    std::cout << "Impossivel calcular" << std::endl;
+  }
+  else
+  {
+
+    R1 = (-B + std::sqrt(delta)) / (2 * A);
+    R2 = (-B - std::sqrt(delta)) / (2 * A);
+
+    std::cout.precision(5);
+    std::cout << "R1 = " << std::fixed << R1 << std::endl;
+    std::cout << "R2 = " << std::fixed << R2 << std::endl;
+  }
+
+  return 0;
+}
+
+/*
+
+int main()
+{
+
+  int a, b, c, d;
+
+  std::cin >> a >> b >> c >> d;
+
+  if (b > c && d > a && (c + d) > (b + a) && c > 0 && d > 0 && a % 2 == 0)
+  {
+    std::cout << "Valores aceitos" << std::endl;
+  }
+  else
+  {
+    std::cout << "Valores nao aceitos" << std::endl;
+  }
 
   return 0;
 }
