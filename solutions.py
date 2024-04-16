@@ -1,31 +1,55 @@
 
-N1, N2, N3, N4 = map(float, input().split())
+x, y = map(float, input().split())
 
 
-average = (N1 * 2 + N2 * 3 + N3 * 4 + N4 * 1) / 10
-
-
-print("Media:", format(average, ".1f"))
-
-
-if average >= 7.0:
-    print("Aluno aprovado.")
-elif average < 5.0:
-    print("Aluno reprovado.")
+if x == 0.0 and y == 0.0:
+    print("Origem")
+elif x == 0.0:
+    print("Eixo Y")
+elif y == 0.0:
+    print("Eixo X")
 else:
-    print("Aluno em exame.")
-    
-    exam_score = float(input())
-  
-    new_average = (average + exam_score) / 2
-    print("Nota do exame:", format(exam_score, ".1f"))
-  
-    if new_average >= 5.0:
-        print("Aluno aprovado.")
+    if x > 0.0:
+        if y > 0.0:
+            print("Q1")
+        else:
+            print("Q4")
     else:
-        print("Aluno reprovado.")
+        if y > 0.0:
+            print("Q2")
+        else:
+            print("Q3")
+
+
+
+
+# N1, N2, N3, N4 = map(float, input().split())
+
+
+# average = (N1 * 2 + N2 * 3 + N3 * 4 + N4 * 1) / 10
+
+
+# print("Media:", format(average, ".1f"))
+
+
+# if average >= 7.0:
+#     print("Aluno aprovado.")
+# elif average < 5.0:
+#     print("Aluno reprovado.")
+# else:
+#     print("Aluno em exame.")
+    
+#     exam_score = float(input())
   
-    print("Media final:", format(new_average, ".1f"))
+#     new_average = (average + exam_score) / 2
+#     print("Nota do exame:", format(exam_score, ".1f"))
+  
+#     if new_average >= 5.0:
+#         print("Aluno aprovado.")
+#     else:
+#         print("Aluno reprovado.")
+  
+#     print("Media final:", format(new_average, ".1f"))
 
 
 
