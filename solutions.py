@@ -1,10 +1,41 @@
 
-a = [4.00, 4.50, 5.00, 2.00, 1.50]
-b, c = map(int, input().split())
+N1, N2, N3, N4 = map(float, input().split())
 
-resp = a[b-1] * c
 
-print("Total: R$ {:.2f}".format(resp))
+average = (N1 * 2 + N2 * 3 + N3 * 4 + N4 * 1) / 10
+
+
+print("Media:", format(average, ".1f"))
+
+
+if average >= 7.0:
+    print("Aluno aprovado.")
+elif average < 5.0:
+    print("Aluno reprovado.")
+else:
+    print("Aluno em exame.")
+    
+    exam_score = float(input())
+  
+    new_average = (average + exam_score) / 2
+    print("Nota do exame:", format(exam_score, ".1f"))
+  
+    if new_average >= 5.0:
+        print("Aluno aprovado.")
+    else:
+        print("Aluno reprovado.")
+  
+    print("Media final:", format(new_average, ".1f"))
+
+
+
+
+# a = [4.00, 4.50, 5.00, 2.00, 1.50]
+# b, c = map(int, input().split())
+
+# resp = a[b-1] * c
+
+# print("Total: R$ {:.2f}".format(resp))
 
 
 # while True:
