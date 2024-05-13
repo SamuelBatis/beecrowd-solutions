@@ -2,7 +2,30 @@
 
 using namespace std;
 
-int main()
+
+int main () {
+  int ini, fim, resp;
+
+  cin >> ini >> fim;
+
+  if(ini > fim) {
+    resp = fim + 24;
+  } 
+
+  if(fim == ini){
+    resp = 24;
+  } else {
+    resp = fim - ini;
+  }
+
+    cout << "O JOGO DUROU " << resp << " HORA(S)" << endl;
+
+
+
+  return 0;
+}
+
+/*int main()
 {
 
   double x, y;
