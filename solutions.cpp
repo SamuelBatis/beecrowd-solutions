@@ -4,6 +4,56 @@ using namespace std;
 
 
 int main () {
+  
+  double a, b;
+  cin >> a;
+
+  cout << fixed << setprecision(2);
+  if(a < 400.01) {
+    double reajust = (a * 15)/100;
+
+    b = a + reajust;
+    cout << "Novo salario: " << b << endl 
+      << "Reajuste ganho: " << reajust << endl
+      << "Em percentual: 15 %" << endl;
+  } else if(a > 400.00 && a < 800.01) {
+    double reajust = (a * 12)/100;
+
+    b = a + reajust;
+    cout << "Novo salario: " << b << endl 
+      << "Reajuste ganho: " << reajust << endl
+      << "Em percentual: 12 %" << endl;
+  } else if(a > 800.00 && a < 1200.01) {
+    double reajust = (a * 10)/100;
+
+    b = a + reajust;
+    cout << "Novo salario: " << b << endl 
+      << "Reajuste ganho: " << reajust << endl
+      << "Em percentual: 10 %" << endl;
+  } else if(a > 1200.00 && a < 2000.01) {
+    double reajust = (a * 7)/100;
+
+    b = a + reajust;
+    cout << "Novo salario: " << b << endl 
+      << "Reajuste ganho: " << reajust << endl
+      << "Em percentual: 7 %" << endl;
+  } else {
+
+    double reajust = (a * 4)/100;
+
+    b = a + reajust;
+    cout << "Novo salario: " << b << endl 
+      << "Reajuste ganho: " << reajust << endl
+      << "Em percentual: 4 %" << endl;
+  }
+
+
+
+  return 0;
+}
+
+
+/*int main () {
   int ini, fim, resp;
 
   cin >> ini >> fim;
